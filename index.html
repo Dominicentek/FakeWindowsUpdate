@@ -1,0 +1,46 @@
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Windows Fake Update</title>
+      <link rel="stylesheet" href="style.css">
+      <script defer>
+         var percentage = 0
+         setInterval(function() {
+            var chance = Math.floor(Math.random() * 5)
+            if (chance == 0) {
+               percentage++
+               if (percentage > 100) percentage = 100
+               document.getElementById("percentage").innerHTML = percentage + "%"
+            }
+         }, 1000)
+      </script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="wrapper">
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+         </div>
+         <div class="text">
+            Pracujeme na aktualizacích <text id="percentage">0%</text><br>
+            Nevypínejte počítač, bude to chvíli trvat.
+         </div>
+      </div>
+   </body>
+</html>
